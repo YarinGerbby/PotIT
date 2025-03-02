@@ -1,0 +1,7 @@
+C:\Users\yarin\Documents\GitHub\PotIT\out\PotWeb.exe
+C:\Users\yarin\Documents\GitHub\PotIT\out\appsettings.Development.json
+C:\Users\yarin\Documents\GitHub\PotIT\out\appsettings.json
+C:\Users\yarin\Documents\GitHub\PotIT\out\PotWeb.dll
+C:\Users\yarin\Documents\GitHub\PotIT\out\PotWeb.deps.json
+C:\Users\yarin\Documents\GitHub\PotIT\out\PotWeb.runtimeconfig.json
+C:\Users\yarin\Documents\GitHub\PotIT\out\PotWeb.pdb

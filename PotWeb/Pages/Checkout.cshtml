@@ -1,0 +1,25 @@
+@page
+@model CheckoutModel
+@{
+    ViewData["Title"] = "Checkout";
+}
+
+<div class="container mt-5">
+    <h1 class="text-center">💳 Checkout</h1>
+
+    <form method="post">
+        <div class="mb-3">
+            <label class="form-label">Full Name</label>
+            <input type="text" name="FullName" class="form-control" required>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Email</label>
+            <input type="email" name="Email" class="form-control" required>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Credit Card Number</label>
+            <input type="text" name="CardNumber" class="form-control" required>
+        </div>
+        <button type="submit" class="btn btn-success">Complete Purchase</button>
+    </form>
+</div>

@@ -1,0 +1,40 @@
+@page
+@model ReviewsModel
+@{
+    ViewData["Title"] = "Customer Reviews";
+}
+
+<div class="container mt-5">
+    <h1 class="text-center">⭐ Customer Reviews</h1>
+    <p class="text-center">See what others are saying about our pottery.</p>
+
+    <div class="mt-4">
+        @foreach (var review in Model.Reviews)
+        {
+            <div class="card mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">@review.Name</h5>
+                    <p class="card-text">"@review.Message"</p>
+                    <p class="text-muted">⭐ @review.Rating/5</p>
+                </div>
+            </div>
+        }
+    </div>
+
+    <h2 class="mt-5">Leave a Review</h2>
+    <form method="post">
+        <div class="mb-3">
+            <label class="form-label">Name</label>
+            <input type="text" name="Name" class="form-control" required>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Message</label>
+            <textarea name="Message" class="form-control" required></textarea>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Rating (1-5)</label>
+            <input type="number" name="Rating" class="form-control" min="1" max="5" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit Review</button>
+    </form>
+</div>

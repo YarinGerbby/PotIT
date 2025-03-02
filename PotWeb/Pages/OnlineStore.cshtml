@@ -1,0 +1,35 @@
+@page
+@model OnlineStoreModel
+@{
+    ViewData["Title"] = "Online Store";
+}
+
+<div class="container mt-5">
+    <h1 class="text-center">🛍️ Shop Our Handmade Pottery</h1>
+    <p class="text-center text-muted">Each piece is uniquely crafted with love and passion.</p>
+
+    <div class="row">
+        @foreach (var item in Model.PotteryItems)
+        {
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="@item.ImageUrl" class="card-img-top" alt="@item.Name">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">@item.Name</h5>
+                        <p class="text-muted">@item.CreationDate.ToString("MMMM dd, yyyy")</p>
+                        <p><strong>Size:</strong> @item.Size</p>
+                        <p><strong>Artist:</strong> @item.ArtistName</p>
+                        <p class="fs-4"><strong>@item.Price$</strong></p>
+
+                        <!-- Add to Cart Button -->
+                        <form method="post">
+                            <input type="hidden" name="name" value="@item.Name" />
+                            <input type="hidden" name="price" value="@item.Price" />
+                            <button type="submit" class="btn btn-primary">Add to Cart</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
